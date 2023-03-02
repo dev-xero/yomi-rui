@@ -2,7 +2,6 @@ package dev.xero.yomirui.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
@@ -29,6 +28,7 @@ fun SearchBar(
 		value = searchText,
 		onValueChange = onSearchValueChange,
 		maxLines = 1,
+		singleLine = true,
 		placeholder = {
 			Text(
 				text = stringResource(id = R.string.search_up_manga),
