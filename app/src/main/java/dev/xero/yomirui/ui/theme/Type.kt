@@ -22,6 +22,10 @@ val Inter = FontFamily(
 
 val OutFit = FontFamily(
 	Font(
+		resId = R.font.outfit_regular,
+		FontWeight.Normal
+	),
+	Font(
 		resId = R.font.outfit_bold,
 		FontWeight.Bold
 	),
@@ -56,7 +60,12 @@ val Typography = Typography(
 		fontFamily = Inter,
 		fontWeight = FontWeight.Normal,
 		fontSize = 14.sp
-	)
+	),
 
+	body2 = TextStyle(
+		fontFamily = OutFit,
+		fontWeight = FontWeight.Normal,
+		fontSize = 16.sp
+	)
 
 )
