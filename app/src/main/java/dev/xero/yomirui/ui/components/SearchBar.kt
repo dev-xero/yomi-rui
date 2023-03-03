@@ -3,10 +3,12 @@ package dev.xero.yomirui.ui.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
@@ -24,6 +26,8 @@ fun SearchBar(
 	searchText: String,
 	onSearchValueChange: (String) -> Unit
 ) {
+	val focusManager = LocalFocusManager.current
+
 	OutlinedTextField(
 		value = searchText,
 		onValueChange = onSearchValueChange,
@@ -44,7 +48,7 @@ fun SearchBar(
 			)
 		},
 		keyboardOptions = KeyboardOptions.Default.copy(
-			imeAction = ImeAction.Next,
+			imeAction = ImeAction.Done,
 			keyboardType = KeyboardType.Text
 		),
 		modifier = modifier
@@ -57,7 +61,12 @@ fun SearchBar(
 			textColor = White,
 			leadingIconColor = White
 		),
-		textStyle = MaterialTheme.typography.body2
+		textStyle = MaterialTheme.typography.body2,
+		keyboardActions = KeyboardActions(
+			onDone = {
+				focusManager.clearFocus()
+			}
+		)
 	)
 }
 
