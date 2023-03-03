@@ -1,5 +1,5 @@
 package dev.xero.yomirui.ui.viewmodel
 
-class YomiUiState {
-
-}
+data class YomiUiState (
+	var searchQuery: String = "",
+	)
