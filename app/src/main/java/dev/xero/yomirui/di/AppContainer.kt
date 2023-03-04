@@ -13,7 +13,7 @@ interface AppContainerInterface {
 }
 
 class AppContainer : AppContainerInterface {
-	private val baseURL = "https://api.jikan.moe/v4/"
+	private val baseURL = "https://kitsu.io/api/edge/"
 
 	// SETUP RETROFIT INSTANCE
 	@OptIn(ExperimentalSerializationApi::class)

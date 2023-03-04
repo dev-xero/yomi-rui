@@ -1,9 +1,9 @@
 package dev.xero.yomirui.api
 
-import dev.xero.yomirui.model.MangaInfo
+import dev.xero.yomirui.model.MangaData
 import retrofit2.http.GET
 
 interface YomiRuiApiServiceInterface {
-	@GET("top/manga")
-	suspend fun getTopManga(): List<MangaInfo>
+	@GET("trending/manga")
+	suspend fun getTopManga(): MangaData
 }

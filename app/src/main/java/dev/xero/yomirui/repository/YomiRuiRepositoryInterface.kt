@@ -1,7 +1,7 @@
 package dev.xero.yomirui.repository
 
-import dev.xero.yomirui.model.MangaInfo
+import dev.xero.yomirui.model.MangaData
 
 interface YomiRuiRepositoryInterface {
-	suspend fun getTopManga(): List<MangaInfo>
+	suspend fun getTopManga(): MangaData
 }
